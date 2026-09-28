@@ -2,6 +2,18 @@
 
 Proyecto de automatizacion de algunas funciones de [SauceDemo](https://www.saucedemo.com/). Se uso Python, pytest y Selenium.
 
+## Proposito
+
+La idea es probar algunas funciones basicas de la pagina: entrar con un usuario valido, revisar los productos y agregar uno al carrito.
+
+## Tecnologias usadas
+
+- Python
+- pytest
+- Selenium WebDriver
+- pytest-html
+- Google Chrome
+
 ## Que se prueba
 
 El proyecto incluye las pruebas que pide la pre-entrega:
@@ -22,9 +34,16 @@ pages/
 tests/
   conftest.py
   test_saucedemo.py
+utils/
+  helpers.py
+reports/
+  reporte.html
+  execution.log
 pytest.ini
 requirements.txt
 ```
+
+No se usan datos externos CSV o JSON en este proyecto.
 
 ## Antes de empezar
 
