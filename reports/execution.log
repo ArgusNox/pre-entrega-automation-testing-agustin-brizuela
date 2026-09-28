@@ -1,0 +1,3 @@
+Ejecucion de pruebas SauceDemo
+Comando: python -m pytest tests/test_saucedemo.py --html=reports/reporte.html --self-contained-html
+Resultado: 4 passed in 20.24s
