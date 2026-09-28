@@ -1,7 +1,6 @@
 """Configuracion y fixtures que usan las pruebas."""
 
 import logging
-import os
 from datetime import datetime
 from pathlib import Path
 
@@ -9,10 +8,12 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+from utils.helpers import get_env
 
-BASE_URL = os.getenv("SAUCEDEMO_URL", "https://www.saucedemo.com/")
-USERNAME = os.getenv("SAUCEDEMO_USER", "standard_user")
-PASSWORD = os.getenv("SAUCEDEMO_PASSWORD", "secret_sauce")
+
+BASE_URL = get_env("SAUCEDEMO_URL", "https://www.saucedemo.com/")
+USERNAME = get_env("SAUCEDEMO_USER", "standard_user")
+PASSWORD = get_env("SAUCEDEMO_PASSWORD", "secret_sauce")
 EVIDENCE_DIR = Path("reports") / "evidencias"
 Path("reports").mkdir(exist_ok=True)
 
@@ -27,7 +28,7 @@ logger = logging.getLogger(__name__)
 def _build_driver():
     """Abre Chrome. Por defecto corre sin mostrar la ventana."""
     options = Options()
-    if os.getenv("HEADLESS", "true").lower() not in {"0", "false", "no"}:
+    if get_env("HEADLESS", "true").lower() not in {"0", "false", "no"}:
         options.add_argument("--headless=new")
     options.add_argument("--window-size=1440,1000")
     options.add_argument("--no-sandbox")
