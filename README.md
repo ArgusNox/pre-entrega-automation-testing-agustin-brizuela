@@ -87,15 +87,3 @@ python -m pytest
 ## Como se separaron las pruebas
 
 Cada prueba abre un navegador nuevo. Para las pruebas del catalogo y del carrito se hace el login nuevamente, asi una prueba no queda dependiendo del resultado de otra.
-
-## Para subirlo a Git
-
-Los commits se pueden hacer separados para mostrar los cambios del proyecto:
-
-```bash
-git commit -m "chore: configurar proyecto de automatizacion"
-git commit -am "test: agregar pruebas de login y catalogo"
-git commit -am "test: agregar prueba del carrito"
-git commit -am "docs: agregar README y reporte"
-git push origin main
-```
