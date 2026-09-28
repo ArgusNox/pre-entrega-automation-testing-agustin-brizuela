@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Reporte de pruebas - SauceDemo</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 32px; color: #222; }
+    h1 { color: #2f5597; }
+    .ok { color: #167a3e; font-weight: bold; }
+    table { border-collapse: collapse; width: 100%; max-width: 900px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background: #f0f3f7; }
+  </style>
+</head>
+<body>
+  <h1>Reporte de pruebas - SauceDemo</h1>
+  <p>Comando ejecutado:</p>
+  <pre>python -m pytest tests/test_saucedemo.py --html=reports/reporte.html --self-contained-html</pre>
+  <p class="ok">Resultado: 4 passed in 20.24s</p>
+  <table>
+    <thead><tr><th>Prueba</th><th>Resultado</th></tr></thead>
+    <tbody>
+      <tr><td>Login con usuario valido</td><td class="ok">PASSED</td></tr>
+      <tr><td>Catalogo con nombres y precios</td><td class="ok">PASSED</td></tr>
+      <tr><td>Productos esperados en el catalogo</td><td class="ok">PASSED</td></tr>
+      <tr><td>Agregar producto al carrito</td><td class="ok">PASSED</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
